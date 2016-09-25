@@ -1,0 +1,51 @@
+html{
+  font-family: 'Lato';
+  background-color: #f0f0f0;
+}
+header{
+  margin: 0 auto;
+  text-align: center;
+}
+.title{
+  font-family: 'Pacifico';
+  font-size: 50px;
+  margin: 0.2em auto;
+}
+.content{
+  margin-top: 0.7em;
+  display: flex;
+}
+.coin-title{
+  margin: 1.2em 0 0 0;
+}
+.coin-side{
+  width: 50%;
+  text-align: center;
+  margin: 0.3em;
+  height: 455px;
+  color: white;
+  border-radius: 10px;
+}
+.tail{
+  background-color: #1826f2
+}
+.head{
+  background-color: #f05609
+}
+.result{
+  font-size: 72px;
+  margin: 2em 0;
+}
+.input-shots{
+  font-size: 20px;
+  width: 350px;
+}
+.btn-shots{
+  border: none;
+  background-color: #34BD2E;
+  width: 150px;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+  border-width: 3px; 
+}

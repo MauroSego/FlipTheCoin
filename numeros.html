@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Números</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato|Pacifico" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" href="coin.css">
+</head>
+<body>
+  <header>
+    <h1 class="title">Flip the coin!</h1>
+    <p class="description">Ingresá la cantidad de tiros que queres tirar la moneda.</p>
+    <input class="input-shots" type="text" id="numerito">
+    <input class="btn-shots" value="Calcular" id="boton" type="submit">
+  </header>
+  <div class="content">
+    <article class="coin-side head">
+      <h2 class="coin-title">Cara</h2>
+      <p class="result" id="cara"></p>
+    </article>
+    <article class="coin-side tail">
+      <h2 class="coin-title">Seca</h2>
+      <p class="result" id="seca"></p>
+    </article>
+  </div>
+</body>
+<script>
+    var boton = document.getElementById('boton');
+    var texto = document.getElementById('numerito');
+    var $cara = document.getElementById('cara');
+    var $seca = document.getElementById('seca');
+
+    boton.addEventListener('click', flip)
+
+
+    function flip(){
+      var tiros = parseInt(texto.value)
+      if (tiros < 5000){
+        var cara = 0;
+        var seca = 0;
+        console.log(tiros)
+        for(i = 0; i < tiros; i++){
+          var num = Math.random();
+          console.log(num);
+          if(num >= 0.5){
+            cara++
+            $cara.textContent = cara
+          } else{
+            seca++
+            $seca.textContent = seca
+          }
+        }
+        console.log("Cara: " + cara + ", seca:" + seca);
+        if(cara > seca){
+          alert('ganó cara')
+        } else if(cara == seca){
+          alert('empate')
+        }else{
+          alert('Ganó seca')
+        }
+      } else{
+        alert('Muchos tiros pueden ralentizar tu PC. Elegí menos');
+      }
+    }
+
+</script>
+</html>
